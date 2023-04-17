@@ -1,0 +1,1076 @@
+/*This styling module controls all page layout and sizing styling, also fixed styling features.*/
+/*These can be overidden by using the !important tag in a styling module. NOTE: this may cause unforseen issues with other components of your site.*/
+html, body {
+    margin: 0;
+    padding: 0;
+ }
+
+
+/*Document body changes for header types*/
+html:has(.parallaxHeader), body:has(.parallaxHeader) {
+    overflow: hidden;
+}
+
+html:has(.fullscreenHeader), body:has(.fullscreenHeader) {
+    overflow-x: hidden;
+
+    background-color: gray;
+}
+
+/*Text template standard sizing and positioning. */
+.mainTitle {
+    padding: 7.5vh;
+}
+
+.pageTitle {
+    grid-area: title;
+
+    width: 100%;
+    height: 100%;
+
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-bottom: 2.5vh;
+}
+
+.p {
+    grid-area: description;
+
+    width: 100%;
+    height: 100%;
+
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-bottom: 5vh;
+}
+
+.textCentered {
+    text-align: center;
+}
+
+/*Info box fixed styling, positioning, size and layout*/
+.infoBox {
+    grid-area: infoBox;
+
+    text-align: center;
+
+    height: fit-content;
+    max-width: 90%;
+
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+/*Image fixed styling, positioning, size and layout*/
+.imageBox {
+    grid-area: image;
+
+    width: 100%; 
+    height: 100%;
+
+    padding-left: 5vw;
+    padding-right: 5vw;
+    margin: auto;
+}
+
+.imageBox2 {
+    grid-area: component;
+
+    width: 100%;
+    height: 100%;
+
+    padding-left: 5vw;
+    padding-right: 5vw;    margin: auto;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+
+    box-shadow: 1px 1px 8px #000;
+}
+
+/*Page layouts*/
+.pageLayout1 {
+    display: grid;
+
+    grid-template-areas: "title title"
+                         "description image"
+                         "component component";
+    grid-template-rows: max-content;
+}
+
+.pageLayout2 {
+    display: grid;
+
+    grid-template-areas: "title title"
+                         "description description"
+                         "infoBox component";
+    grid-template-rows: max-content;
+}
+
+.pageLayout3 {
+    display: grid;
+
+    grid-template-areas: "title title"
+                         "component component";
+    grid-template-rows: max-content;
+}
+
+.pageLayout4 {
+    display: grid;
+
+    grid-template-areas: "title title"
+                         "description description"
+                         "component component";
+    grid-template-rows: max-content;
+}
+
+.pageLayout5 {
+    display: grid;
+
+    grid-template-areas: "title title"
+                         "description description"
+                         "image image"
+                         "component component";
+    grid-template-rows: max-content;
+}
+
+.pageLayout6 {
+    display: grid;
+
+    grid-template-areas: "title title"
+                         "infoBox component"
+                         "description description";
+    grid-template-rows: max-content;
+}
+
+
+/*Menu, page, header and footer fixed styling, positioning, size and layout*/
+/*Menus*/
+.headerMenu { /*Menu bar across top*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+    width: 100vw;
+    height: 13.5vh;
+}
+
+.appContainer:has(.headerMenu) {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    width: 100vw;
+}
+
+.stackMenu { /*Stack of buttons menu*/
+    width: 25vw;
+}
+
+.stackMenuRight {
+    order: 1;
+    width: 25vw;
+}
+
+.appContainer:has(.stackMenu) {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+
+    width: 100vw;
+}
+
+.appContainer:has(.stackMenuRight) {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+
+    width: 100vw;
+}
+
+.menuButton {
+    width: 100%;
+    height: 15vh;
+
+    padding-bottom: 5px;
+}
+
+/*Standard header*/
+.header {
+    padding-left: 3.5vw;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    
+    width: 100vw;
+}
+
+/*Parallax header*/
+.parallaxHeader {
+    height: 30vh;
+    background: url('../media/parallax-header.jpg');
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    vertical-align: top;
+    transform-origin: center top;
+    transform: translateZ(-1px) scale(2);
+
+}
+
+.mainContainer:has(.parallaxHeader) { /*Keith Clark parralax pure css solution*/
+    height: 100vh;
+    max-height: 100%;
+    
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    perspective: 1px;
+    
+    perspective-origin: center top;
+
+    transform-style: preserve-3d;
+
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.mainContainer:has(.parallaxHeader) > .appContainer {
+    max-height: 100%;
+    background: transparent;
+    transform: translateZ(0);
+}
+
+/*Fullscreen header*/
+.fullscreenHeader {
+    position: fixed;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: gray;
+
+    font-weight: bold;
+    text-align: center;
+   
+    transition: 0.85s;
+    transition-delay: 0.2s;
+}
+
+.minimisedFullscreenHeader {
+    height: 15vh;
+
+    background-color: #00000030;
+
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2)
+}
+
+.fullscreenHeaderTitle {
+    margin-top: 40vh;
+
+    transition: 0.85s;
+    transition-delay: 0.2s;
+}
+
+.fullscreenHeaderTitle:hover {
+    font-size: 5vw;
+}
+
+.fullscreenHeader.minimisedFullscreenHeader > .fullscreenHeaderTitle {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.fullscreenHeader + .appContainer{
+    padding-top: 15vh;
+}
+
+/*Page*/
+.pageContainer {
+    padding-bottom: 10vh;
+    padding-top: 5vh;
+
+    width: 100%;
+    height: 100%;
+
+    min-height: 100vh;
+}
+
+.footer {
+    width: 100vw;
+    height: 10vh;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/*Spacing*/
+.smallSpace {
+    height: 5vh;
+}
+
+.mediumSpace {
+    height: 15vh;
+}
+
+.largeSpace {
+    height: 30vh;
+}
+
+/*Useful styling*/
+.centerContent {
+    margin: auto;
+}
+
+/*Awards display component fixed styling, positioning and layout.*/
+.awardsContainer {
+    grid-area: component;
+
+    width: 100%;
+    height: 30vh;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    margin-top: 10vh;
+
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.awardsIconContainer {
+    text-align: center;
+}
+
+.awardsIcon {
+    width: 80%;
+    height: 30vh;
+
+    transform: translate(0%, -7.5%);
+}
+
+/*Social media panel component fixed styling, positioning and layout.*/
+.socialsPanel {
+    grid-area: component;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    width: 90%;
+    height: 100%;
+
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.socialSlot {
+    width: 100%;
+    height: 100%;
+}
+
+.socialButton {
+    width: 100%;
+    height: 100%;
+
+    background: transparent;
+    
+    border-radius: 0.4vw;
+}
+
+.socialIcon {
+    width: 20%;
+    height: 80%;
+
+    transform: translate(7.5%, 7.5%);
+}
+
+/*Booking component fixed styling, positioning, size and layout*/
+.bookingContainer { 
+    grid-area: component;
+
+    width: 80%;
+    height: fit-content;
+
+    padding: 2vh;
+
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10vh;
+
+    font-weight: 750;
+    font-size: 1.4vw;
+}
+
+.completeBookingContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    width: 100%;
+    height: 15vh;
+}
+
+.bookingContainer .menuButton {
+    width: 100%;
+    height: 100%;
+}
+
+/*Section completed component*/
+.sectionCompleted {
+    width: 100%;
+    height: 10vh;
+
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr;
+
+    box-shadow: 1px 1px 4px #000;
+
+    margin-bottom: 1vw;
+
+    border-radius: 2vh;
+}
+
+.sectionCompletedIcon {
+    width: 60%;
+    height: 50%;
+
+    transform: translate(7.5%, 7.5%);
+}
+
+.sectionCompletedCheck {
+    color: rgb(3, 214, 3);
+}
+
+.sectionCompletedInfo {
+    font-weight: 400;
+}
+
+/*Price list component fixed styling, positioning, size and layout*/
+.pricesContainer { 
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+    margin-bottom: 2vw;
+    margin-top: 2vw;
+
+    font-size: 1.4vw;
+    font-weight: 400;
+    
+    box-shadow: 1px 1px 4px #000;
+}
+
+.priceListItem {
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+}
+
+.priceListItem:hover {
+    background-color: #00000050;
+
+    box-shadow: 1px 1px 4px #000;
+}
+
+.priceListItem:focus {
+    background-color: #00000050;
+
+    outline: none;
+
+    box-shadow: 1px 1px 4px #000;
+}
+
+.priceTextBox {
+    text-align: center;
+}
+
+.priceListButton {
+    width: 100%;
+    height: 100%;
+
+    background: none;
+    border: none;
+}
+
+
+/*Date select component fixed styling, positioning, size and layout*/
+.monthSelectorContainer {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+
+    width: 100%;
+    height: 4vh;
+    
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+}
+
+.monthArrowButton {
+    background: transparent;
+    border: none;
+
+    box-shadow: 1px 1px 4px #000;
+}
+
+.monthArrowButton:focus {
+    outline: none;
+}
+
+.dateSelectContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    width: 100%;
+    height: 40vh;
+
+    margin-bottom: 1vw;
+    margin-top: 5vw;
+}
+
+.dayGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+    width: 100%;
+    height: 100%;
+}
+
+.dayButton {
+    width: 100%; 
+    height: 100%;
+
+    background-color: transparent;
+    border: none;
+
+    font-size: 1.5vw;
+}
+
+.dayButton:enabled:hover {
+    box-shadow: 1px 1px 4px #000;
+
+    outline: none;
+
+    background-color: #00000050;
+}
+
+.dayButton:focus {
+    box-shadow: 1px 1px 4px #000;
+
+    outline: none;
+
+    background-color: #00000050;
+}
+
+
+/*Time select component fixed styling, positioning, size and layout*/
+.timeSelectContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+
+    width: 100%;
+    height: fit-content;
+}
+
+.availableTimesContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+    row-gap: 2vh;
+    column-gap: 0.5vh;
+
+    margin-top: 2vw;
+
+    width: 100%;
+    height: fit-content;
+}
+
+.availableTimeButton {
+    width: 100%; 
+    height: 5.71vh;
+
+    background-color: transparent;
+    border-radius: 2vw;
+
+    font-size: 1vw;
+
+    margin: 0.1vw;
+
+    text-align: center;
+}
+
+.availableTimeButton:focus {
+    background-color: #00000050;
+
+    outline: none;
+}
+
+.availableTimeButton:hover {
+    background-color: #00000050;
+}
+
+/*Info & contact form components fixed styling, positioning, size and layout*/
+.infoFormContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.infoFormLabel {
+    width: 50%;
+
+    font-weight: 400;
+
+    margin: auto;
+}
+
+.infoFormInput {
+    width: 50%;
+
+    margin: auto;
+}
+
+.contactFormContainer {
+    grid-area: component;
+
+    width: 90%;
+    height: 100%;
+
+    margin-right: 5vw;
+
+    padding: 2vh;
+}
+
+.contactFormLabel {
+    width: 50%;
+
+    font-weight: 500;
+}
+
+.contactFormQuery {
+    height: 10vh;
+}
+
+/*Gallery component fixed styling, positioning, size and layout*/
+.galleryContainer { 
+    grid-area: component;
+
+    width: 90%;
+    height: 70vh;
+    
+    margin: auto;
+
+    text-align: center;
+
+    border-radius: 8px;
+    box-shadow: 1px 1px 8px #000;
+}
+
+.galleryImage {
+    width: 100%;
+    height: 70vh;
+}
+
+.carousel {
+    width: 100%;
+    height: 70vh;
+
+    
+    text-align: center;
+}
+
+
+/*Maps component fixed styling, positioning and size*/
+.mapContainer {
+    grid-area: component;
+
+    width: 60vw;
+    height: 40vh;
+
+    margin-right: 2.5vw;
+
+    border-radius: 20px;
+    box-shadow: 1px 1px 8px #000;
+}
+
+.appContainer:has(.stackMenu) .mapContainer, .appContainer:has(.stackMenuRight) .mapContainer{
+    width: 40vw;
+}
+
+/*Mobile app fixed styling, sizing, and positioning*/
+.mobileAppHomePage {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    row-gap: 2.5vh;
+ }
+
+ @media (orientation: landscape){ /*Hide app when turned landscape on mobile*/
+    .mobileAppWrapper{
+        display: none;
+    }
+ }
+
+ .mobileSpacing {
+    height: 6vh;
+ }
+
+ .mobileFixedHeader {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    width: 100vw;
+    height: auto; 
+
+    position: fixed;
+
+    padding-top: 1vh;
+    padding-bottom: 0.5vh;
+    padding-right: 4vw;
+
+    background-color: black;
+}
+
+
+.mobileMainTitle {
+    color: white;
+
+    font-size: 7vw;
+    letter-spacing: 1px;
+    font-family: serif;
+
+    text-align: center;
+}
+
+.mobileViewPrompt {
+    color: white;
+
+    font-size: 3vw;
+
+    text-align: right;
+}
+
+.mobileFixedFooter {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+    width: 100vw;
+    height: auto; 
+
+    position: fixed;
+    bottom: 0;
+
+    background-color: black;
+}
+
+.mobileAppHomePage .image {
+    width: 96vw;
+    height: auto;
+
+    margin-top: 5vh;
+    margin-left: 2vw;
+    margin-right: 2vw;
+
+    box-shadow: 1px 1px 8px #000;
+}
+
+.mobileButton {
+    width: 100%;
+    height: 8vh;
+
+    background-color: black;
+
+    color: white;
+
+    letter-spacing: 1px;
+    font-family: serif;
+
+    border-color: rgb(37, 37, 37);
+
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.mobileButton:active {
+    background-color: rgb(37, 37, 37);
+}
+
+.mobileIcon {
+    width: 100%;
+    height: 100%;
+
+    transform: translate(7.5%, 7.5%);
+}
+
+/*Mobile bookings page*/
+.mobileAppBookingsPage {
+    width: 100vw;
+    height: auto;
+}
+
+.mobileAppBookingsPage > .bookingContainer {
+    width: 100%;
+    height: auto;
+
+    margin: 0;
+
+    border-radius: 0;
+
+    background-color: white;
+}
+
+.mobileAppBookingsPage .pricesContainer {
+    margin-top: 5vh;
+
+    font-size: 4vw;
+}
+
+.mobileAppBookingsPage .priceListItem {
+    height: 10vh;
+
+    border: 1px solid darkgray;
+
+    font-size: 4vw;
+}
+
+.mobileAppBookingsPage .priceListItem:hover {
+    background-image: none;
+
+    background-color: lightgray;
+
+    box-shadow: 1px 1px 4px #000;
+}
+
+.mobileAppBookingsPage .priceListItem:focus {
+    background-image: none;
+
+    background-color: lightgray;
+
+    outline: none;
+
+    box-shadow: 1px 1px 4px #000;
+}
+
+.mobileAppBookingsPage .priceListButton {
+    color: black;
+
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.mobileAppBookingsPage .priceTextBox {
+    display : flex;
+    align-items : center;
+
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: lightgray;
+}
+
+.mobileAppBookingsPage div {
+    font-size: 4vw;
+}
+
+.mobileAppBookingsPage .sectionCompleted {
+    font-size: 3vw;
+
+    grid-template-columns: 1fr 2fr 3fr !important;
+
+    align-items: center;
+
+    height: 100%;
+
+    padding: 1vw;
+
+    margin-bottom: 2vh;
+}
+
+.mobileAppBookingsPage .monthSelectorContainer {
+    font-size: 4vw;
+}
+
+.mobileAppBookingsPage .monthArrowButton {
+    background: transparent;
+    border: none;
+
+    color: black;
+
+    box-shadow: 1px 1px 4px #000;
+
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.mobileAppBookingsPage .monthArrowButton:hover {
+    background-image: none;
+
+    background-color: lightgray;
+}
+
+.mobileAppBookingsPage .monthArrowButton:active {
+    background-image: none;
+
+    background-color: lightgray;
+}
+
+.mobileAppBookingsPage .monthArrowButton:focus {
+    background-image: none;
+
+    background-color: lightgray;
+}
+
+.mobileAppBookingsPage .dateSelectContainer {
+    height: 100%;
+}
+
+.mobileAppBookingsPage .dayGrid {
+    margin-top: 3vh;
+
+    height: 25vh;
+}
+
+.mobileAppBookingsPage .dayButton {
+    font-size: 3vw; 
+
+    border: 2px solid lightgray;
+
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.mobileAppBookingsPage .dayButton:enabled {
+    color: black;
+}
+
+.mobileAppBookingsPage .dayButton:enabled:hover {
+    box-shadow: 1px 1px 4px #000;
+
+    background-image: none;
+
+    background-color: lightgray;
+}
+
+.mobileAppBookingsPage .dayButton:focus {
+    background-image: none;
+
+    background-color: lightgray;
+}
+
+.mobileAppBookingsPage .dayButton:active {
+    background-image: none;
+
+    background-color: lightgray;
+}
+
+.mobileAppBookingsPage .timeSelectContainer {
+    font-size: 4vw;
+
+    margin-top: 3vh;
+}
+
+.mobileAppBookingsPage .availableTimesContainer {
+    row-gap: 0;
+    column-gap: 0;
+
+    max-width: 100%;
+
+    margin-top: 2vh;
+}
+
+.mobileAppBookingsPage .availableTimeButton {
+    font-size: 1.8vw;
+
+    margin: 0;
+
+    color: black;
+
+    border-radius: 0 !important;
+
+    border: 2px solid lightgray;
+
+    text-align: center;
+
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.mobileAppBookingsPage .availableTimeButton:focus {
+    background-color: lightgray;
+    background-image: none;
+
+    outline: none;
+}
+
+.mobileAppBookingsPage .availableTimeButton:hover {
+    background-color: lightgray;
+    background-image: none;
+}
+
+.mobileAppBookingsPage .availableTimeButton:active {
+    background-color: lightgray;
+    background-image: none;
+}
+
+.mobileAppBookingsPage .infoFormContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    margin-top: 2vh;
+}
+
+.mobileAppBookingsPage .menuButton {
+    width: 100%;
+    height: 8vh;
+
+    background-image: none;
+    background-color: black;
+
+    color: white;
+
+    letter-spacing: 1px;
+    font-family: serif;
+
+    border-color: rgb(37, 37, 37);
+
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.mobileAppBookingsPage .menuButton:active {
+    background-color: rgb(37, 37, 37);
+}
+
+.mobileAppContactPage .contactFormContainer {
+    width: 100vw;
+    height: 100%;
+
+    margin-right: 0;
+
+    padding: 2vh;
+
+    border-radius: 0;
+
+    border: none;
+
+    background-color: transparent;
+
+    box-shadow: 0 4px 15px 0 rgba(47, 58, 71, 0.76);
+}
+
+.mobileAppContactPage .menuButton {
+    width: 100%;
+    height: 8vh;
+
+    background-image: none;
+    background-color: black;
+
+    color: white;
+
+    letter-spacing: 1px;
+    font-family: serif;
+
+    border-color: rgb(37, 37, 37);
+
+    appearance: none;
+    -webkit-appearance: none;
+}

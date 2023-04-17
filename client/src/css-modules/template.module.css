@@ -1,0 +1,67 @@
+/*This is a styling module which shows all customisable styling for a website.*/
+.appContainer > div { /*APP COLOR/BACKGROUND*/
+    background-attachment: fixed; /*MANDATORY*/
+}
+
+.pageStyling { /*PAGE COLOUR/BACKGROUND*/
+}
+
+.mainTitle { /*MAIN TITLE TYPOGRAPHY*/
+}
+
+.pageTitle { /*PAGE HEADING TYPOGRAPHY*/
+}
+
+.p { /*ALL OTHER TEXT TYPOGRAPHY*/
+}
+
+.menu { /*MENU SECTION/NAVAR COLOR, SHADOWS ECT...*/
+}
+
+.menuButton { /*PRIMARY BUTTON STYLING FOR THE WEBSITE*/
+    width: 100%; /*MANDATORY*/
+    height: 100%; /*MANDATORY*/
+}
+
+/*INFO BOX*/
+.infoBox {
+}
+
+/*BOOKING COMPONENT*/
+.bookingContainer { /*PARENT DIV STYLING*/
+}
+
+.priceListItem { /*SERVICES SELECT LIST STYLING*/
+}
+
+.dayButton { /*CALENDER DATE BUTTON*/
+}
+
+.monthArrowButton { /*MONTH SELECTOR BUTTON*/
+}
+
+.availableTimeButton { /*TIME SELECT BUTTON*/
+}
+
+/*CONTACT FORM COMPONENT*/
+.contactFormContainer { /*PARENT DIV STYLING*/
+}
+
+/*FOOTER*/
+.footer {
+}
+
+/*SOCIAL MEDIA PANEL COMPONENT*/
+.socialsPanel {
+}
+
+.socialSlot {
+}
+
+.socialButton {
+}
+
+/*AWARDS PANEL COMPONENT*/
+.awardsContainer {
+}
+

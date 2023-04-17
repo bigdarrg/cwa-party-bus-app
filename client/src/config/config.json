@@ -1,0 +1,47 @@
+{
+    "TITLE": "Ptown Party buses",
+    "DESCRIPTION": "We are the Portsmouth's best party bus rental service, nominated for too many awards to name.",
+    "HOUSEANDSTREET": "Anglesea Building",
+    "POSTCODE": "PO1 3DJ",
+    "PROVINCE": "Portsmouth",
+    "COUNTRY": "England",
+
+    "OPENINGTIMES": {
+        "MONDAY": "18:00-23:00",
+        "TUESDAY": "18:00-23:00",
+        "WEDNESDAY": "18:00-23:00",
+        "THURSDAY": "18:00-23:00",
+        "FRIDAY": "18:00-24:00",
+        "SATURDAY": "18:00-24:00",
+        "SUNDAY": "00:00-00:00"
+    },
+    "PRICES": {
+        "1 HOUR RIDE (PAY ON SITE BEFORE RIDE)": 170,
+        "2 HOUR LOOK-AROUND (PAY ON SITE BEFORE RIDE)": 250,
+        "3 HOUR RIDE (PAY ON SITE BEFORE RIDE)": 310,
+        "4 HOUR PARTY (PAY ON SITE BEFORE RIDE)": 360,
+        "5 HOUR BONANZA (PAY ON SITE BEFORE RIDE)": 400
+    }, 
+    "CURRENCY": "£",
+    "SLOTS": [0],
+
+    "INSTAGRAM": "www.instagram.com",
+    "FACEBOOK": "www.facebook.com",
+    "TWITTER": "www.twitter.com",
+    "TELEPHONE": "07123456789",
+    "EMAIL": "welivetopartybus@party.bus",
+
+    "HOMEPAGETEXT": "The party bus business has been laying low for years and we're here to bring it back with a bang. Portsmouth's renouned party bus service is here to show you how it's really done!",
+    "HOMEPAGETEXT2": "We have 4 fully loaded party motors, on wheels and ready for action. Our buses tour as much of Portsmouth as you can pay for, bringing you to all it's party hotspots along the way (*subject to package booked). Each bus ride includes as much as you can drink & as crazy as you can handle. You're probably wondering how we keep this service running... You guessed it: on the spirits on our passengers, so you better be ready to turn up! All bookings made through the website will be confirmed over the phone with the contact number provided.",
+    "ABOUTUSTEXT": "We've been in the party bus business across the country for decades and have finally decided it's about time to show Portsmouth how it's done. If you need to come in and have a chat with us you can find our party bus home above, feel free to come and make in person inquires.",
+    "GALLERYTEXT": "A couple snapshots to show you what we're into, not enough to ruin the suprise ;)",
+    "CONTACTUSTEXT": "If you require any service other than the one's listed on our site then be sure to send us your queries through the below contact form. Everyday of the week (except Sunday) we make a promise to respond back within 24 hours so you can get the party started right away.",
+
+    "STYLE" : "clean",
+    "MENUPOSITION": "left",
+    "HEADERTYPE": "fullscreen",
+
+    "HOMELAYOUT": "largeImageNoAwards",
+    "ABOUTUSLAYOUT": "descriptionLastWithMap",
+    "CONTACTUSLAYOUT": "descriptionFirst"
+}

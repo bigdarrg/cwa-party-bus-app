@@ -1,0 +1,248 @@
+.pageStyling { /*PAGE COLOUR/BACKGROUND*/
+    background-color: #4d5e70;
+}
+
+.mainTitle { /*MAIN TITLE TYPOGRAPHY*/
+    text-align: center;
+    text-transform: uppercase; 
+
+    font-weight: 400;
+    font-size: 4vw;
+    letter-spacing: 1px;
+    font-family: serif;
+
+    color: rgb(41, 41, 41);
+
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: 3.5vw 0;
+    grid-gap: 20px;
+}
+
+.mainTitle::after,.mainTitle::before {
+    content: " ";
+
+    border-bottom: 2px solid #ccc;
+}
+
+.pageTitle { /*PAGE HEADING TYPOGRAPHY*/
+    font-weight: 400;
+    font-size: 4vw;
+    letter-spacing: 1px;
+    font-family: serif;
+}
+
+.p { /*ALL OTHER TEXT TYPOGRAPHY*/
+    font-weight: 400;
+    font-size: 1.4vw;
+
+    color: black;
+}
+
+.menu { /*MENU SECTION/NAVAR COLOR, SHADOWS ECT...*/
+    background-color: #29323c;
+
+    box-shadow: inset 1px 1px 8px #000;
+}
+
+.menuButton { /*PRIMARY BUTTON STYLING FOR THE WEBSITE*/
+    width: 100%; /*MANDATORY*/
+    height: 100%; /*MANDATORY*/
+
+    background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #2b5876);
+
+    text-transform: uppercase;
+    text-align: center;
+    
+    font-size: 15.5px;
+    font-weight: 610;
+
+    color: white;
+
+    cursor: pointer;
+
+    border: none;
+
+    background-size: 200% 120%;
+    
+    transition: all .4s ease-in-out;
+
+    box-shadow: 0 4px 15px 0 rgba(47, 58, 71, 0.76);
+}
+
+.menuButton:hover {
+    transition: all .4s ease-in-out;
+    
+    background-position: 100% 0;
+}
+
+.menuButton:focus {
+    outline: none;
+}
+
+/*INFO BOX*/
+.infoBox {
+    box-shadow: 0 4px 15px 0 rgba(47, 58, 71, 0.76);
+
+    padding: 5vh;
+    background-color: rgb(189, 189, 189);
+
+    letter-spacing: 1px;
+    font-family: serif;
+
+    border-radius: 3vh;
+
+    border-width: 1%;
+    border-style: solid;
+    border-color: #29323c;
+}
+
+/*BOOKING COMPONENT*/
+.bookingContainer { /*PARENT DIV STYLING*/
+    background-color: #485563;
+
+    box-shadow: 0 4px 15px 0 rgba(47, 58, 71, 0.76);
+
+    border-radius: 2vh;
+}
+
+.priceListItem { /*SERVICES SELECT LIST STYLING*/
+    transition: all .4s ease-in-out;
+
+    cursor: pointer;
+
+    border: none;
+
+    background-size: 200% 120%;
+}
+
+.priceListItem:hover {
+    background-image: linear-gradient(to left, #29323c, #485563);
+
+    transition: all .4s ease-in-out;
+
+    background-position: 100% 0;
+}
+
+.dayButton { /*CALENDER DATE BUTTON*/
+    transition: all .4s ease-in-out;
+
+    cursor: pointer;
+
+    border: none;
+
+    background-size: 200% 120%;
+}
+
+.dayButton:hover:enabled {
+    background-image: linear-gradient(to left, #29323c, #485563);
+
+    transition: all .4s ease-in-out;
+
+    background-position: 100% 0;
+}
+
+.monthArrowButton { /*MONTH SELECTOR BUTTON*/
+    transition: all .4s ease-in-out;
+
+    cursor: pointer;
+
+    border: none;
+
+    background-size: 200% 120%;
+
+    border-radius: 2vh;
+}
+
+.monthArrowButton:hover {
+    background-image: linear-gradient(to left, #29323c, #485563);
+
+    transition: all .4s ease-in-out;
+
+    background-position: 100% 0;
+}
+
+.availableTimeButton { /*TIME SELECT BUTTON*/
+    transition: all .4s ease-in-out;
+
+    cursor: pointer;
+
+    background-size: 200% 120%;
+}
+
+.availableTimeButton:hover {
+    background-image: linear-gradient(to left, #29323c, #485563);
+
+    transition: all .4s ease-in-out;
+
+    background-position: 100% 0;
+}
+
+/*CONTACT FORM COMPONENT*/
+.contactFormContainer { /*PARENT DIV STYLING*/
+    box-shadow: 0 4px 15px 0 rgba(47, 58, 71, 0.76);
+
+    padding: 5vh;
+    background-color: rgb(189, 189, 189);
+
+    letter-spacing: 1px;
+    font-family: serif;
+
+    border-radius: 3vh;
+
+    border-width: 1%;
+    border-style: solid;
+    border-color: #29323c;
+}
+
+/*FOOTER*/
+.footer {
+    background-color: #29323c;
+}
+
+/*SOCIAL MEDIA PANEL COMPONENT*/
+.socialsPanel {
+    background-color: transparent;
+}
+
+.socialSlot {
+    border: none;
+}
+
+.socialButton {
+    background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #2b5876);
+
+    text-transform: uppercase;
+    text-align: center;
+    
+    font-size: 15.5px;
+    font-weight: 610;
+
+    color: white;
+
+    cursor: pointer;
+
+    border: none;
+
+    background-size: 200% 120%;
+    
+    transition: all .4s ease-in-out;
+
+    box-shadow: 0 4px 15px 0 rgba(47, 58, 71, 0.76);
+}
+
+.socialButton:hover {
+    transition: all .4s ease-in-out;
+    
+    background-position: 100% 0;
+}
+
+.socialButton:focus {
+    outline: none;
+}
+
+/*AWARDS PANEL COMPONENT*/
+.awardsContainer {
+    background-image: linear-gradient(to left, #29323c, #485563);
+}
+

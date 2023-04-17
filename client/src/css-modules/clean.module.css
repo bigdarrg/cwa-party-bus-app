@@ -1,0 +1,218 @@
+.pageStyling { /*PAGE COLOUR/BACKGROUND*/
+    background-color: white;
+}
+
+.mainTitle { /*MAIN TITLE TYPOGRAPHY*/
+    text-align: left;
+    text-transform: uppercase;
+
+    font-family: "Enriqueta", serif;
+    font-size: 4vw;
+    color: rgb(29, 29, 29);
+
+    transition-duration: 0.8s;
+}
+
+.mainTitle:after  { 
+    content: ".";
+}
+
+.pageTitle { /*PAGE HEADING TYPOGRAPHY*/
+    font-family: "Enriqueta", serif;
+    font-size: 4vw;
+
+    color: rgb(29, 29, 29);
+}
+
+.p { /*ALL OTHER TEXT TYPOGRAPHY*/
+    font-family: "Enriqueta", serif;
+    font-weight: 400;
+    font-size: 1.4vw;
+
+    color: rgb(29, 29, 29);
+}
+
+.menu { /*MENU SECTION/NAVAR COLOR, SHADOWS ECT...*/
+    background-color: white;
+
+    box-shadow: inset 1px 1px 4px #000;
+}
+
+.menuButton { /*PRIMARY BUTTON STYLING FOR THE WEBSITE*/
+    width: 100%; /*MANDATORY*/
+    height: 100%; /*MANDATORY*/
+    
+    align-items: center;
+    justify-content: center;
+    vertical-align: baseline;
+
+    background-color: white;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: .25rem;
+
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+
+    color: rgba(0, 0, 0, 0.85);
+    cursor: pointer;
+
+    font-size: 15.5px;
+    font-weight: 610;
+
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+
+    transition: all 0.25s;
+}
+
+.menuButton:hover, .menuButton:focus {
+    outline: none;
+
+    border-color: rgba(0, 0, 0, 0.15);
+
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.menuButton:hover {
+    transform: translateY(-1px);
+}
+
+.menuButton:active {
+    color: rgba(0, 0, 0, 0.65);
+
+    background-color: #F0F0F1;
+
+    border-color: rgba(0, 0, 0, 0.15);
+
+    box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+
+    transform: translateY(0); 
+}
+
+/*INFO BOX*/
+.infoBox {
+    background-color: white;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2vw;
+
+    padding: 4vh;
+}
+
+/*BOOKING COMPONENT*/
+.bookingContainer { /*PARENT DIV STYLING*/
+    background-color: white;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2vw;
+}
+
+.priceListItem { /*SERVICES SELECT LIST STYLING*/
+    background-color: white;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.dayButton { /*CALENDER DATE BUTTON*/
+    background-color: white;
+
+    border: none;
+}
+
+.monthArrowButton { /*MONTH SELECTOR BUTTON*/
+    background-color: white;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2vw;
+}
+
+.availableTimeButton { /*TIME SELECT BUTTON*/
+    background-color: white;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2vw;
+}
+
+/*CONTACT FORM COMPONENT*/
+.contactFormContainer { /*PARENT DIV STYLING*/
+    background-color: white;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2vw;
+}
+
+/*FOOTER*/
+.footer {
+    background-color: white;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: .25rem;
+}
+
+/*SOCIAL MEDIA PANEL COMPONENT*/
+.socialsPanel {
+    background-color: transparent;
+}
+
+.socialSlot {
+    border: none;
+}
+
+.socialButton {
+    align-items: center;
+    justify-content: center;
+    vertical-align: baseline;
+
+    background-color: white;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: .25rem;
+
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+
+    color: rgba(0, 0, 0, 0.85);
+    cursor: pointer;
+
+    font-size: 15.5px;
+    font-weight: 610;
+
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+
+    transition: all 0.25s;
+}
+
+.socialButton:hover, .socialButton:focus {
+    outline: none;
+
+    border-color: rgba(0, 0, 0, 0.15);
+
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.socialButton:hover {
+    transform: translateY(-1px);
+}
+
+.socialButton:active {
+    color: rgba(0, 0, 0, 0.65);
+
+    background-color: #F0F0F1;
+
+    border-color: rgba(0, 0, 0, 0.15);
+
+    box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+
+    transform: translateY(0);
+}
+
+/*AWARDS PANEL COMPONENT*/
+.awardsContainer {
+    background-color: white;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: .25rem;
+}
+

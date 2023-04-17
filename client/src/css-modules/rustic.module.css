@@ -1,0 +1,163 @@
+.appContainer > div { /*PAGE BACKGROUND*/
+    background-image: url(https://images.pexels.com/photos/218535/pexels-photo-218535.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+
+    background-size: cover;
+
+    background-attachment: fixed; 
+}
+
+.mainTitle { /*MAIN TITLE TYPOGRAPHY*/
+    text-align: center;
+    text-transform: uppercase;
+
+    font-family: "Enriqueta", serif;
+    font-size: 4vw;
+    color: rgb(29, 29, 29);
+}
+
+.pageTitle { /*PAGE HEADING TYPOGRAPHY*/
+    font-family: "Enriqueta", serif;
+    font-size: 4vw;
+
+    color: rgb(29, 29, 29);
+}
+
+.p { /*ALL OTHER TEXT TYPOGRAPHY*/
+    font-family: "Enriqueta", serif;
+    font-weight: 400;
+    font-size: 1.4vw;
+
+    color: rgb(29, 29, 29);
+}
+
+.menu { /*MENU SECTION/NAVAR COLOR, SHADOWS ECT...*/
+    box-shadow: inset 1px 1px 4px #000;
+}
+
+.menuButton { /*PRIMARY BUTTON STYLING FOR THE WEBSITE*/
+    width: 100%; /*MANDATORY*/
+    height: 100%; /*MANDATORY*/
+
+    background-image: url(https://images.pexels.com/photos/207908/pexels-photo-207908.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+
+    outline: none;
+    border: none;
+
+    align-items: center;
+    justify-content: center;
+
+    color: rgba(0, 0, 0, 0.85);
+    cursor: pointer;
+
+    font-size: 15.5px;
+    font-weight: 610;
+
+    text-transform: uppercase;
+    text-align: center;
+
+    transition: all .3s;
+}
+
+.menuButton:hover {
+    color: rgb(236, 87, 0);
+}
+
+/*INFO BOX*/
+.infoBox {
+    background-image: url(https://images.pexels.com/photos/207908/pexels-photo-207908.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2vw;
+
+    padding: 4vh;
+}
+
+/*BOOKING COMPONENT*/
+.bookingContainer { /*PARENT DIV STYLING*/
+    background-image: url(https://images.pexels.com/photos/207908/pexels-photo-207908.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2vw;
+
+    padding: 4vh;
+}
+
+.priceListItem { /*SERVICES SELECT LIST STYLING*/
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.dayButton { /*CALENDER DATE BUTTON*/
+    border: none;
+}
+
+.monthArrowButton { /*MONTH SELECTOR BUTTON*/
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2vw;
+}
+
+.availableTimeButton { /*TIME SELECT BUTTON*/
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2vw;
+}
+
+/*CONTACT FORM COMPONENT*/
+.contactFormContainer { /*PARENT DIV STYLING*/
+    background-image: url(https://images.pexels.com/photos/207908/pexels-photo-207908.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2vw;
+}
+
+/*FOOTER*/
+.footer {
+    background-image: url(https://images.pexels.com/photos/207908/pexels-photo-207908.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+}
+
+/*SOCIAL MEDIA PANEL COMPONENT*/
+.socialsPanel {
+    background-color: transparent;
+}
+
+.socialSlot {
+    border: none;
+}
+
+.socialButton { /*PRIMARY BUTTON STYLING FOR THE WEBSITE*/
+    width: 100%; /*MANDATORY*/
+    height: 100%; /*MANDATORY*/
+
+    background-image: url(https://images.pexels.com/photos/207908/pexels-photo-207908.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+
+    outline: none;
+    border: none;
+
+    align-items: center;
+    justify-content: center;
+
+    color: rgba(0, 0, 0, 0.85);
+    cursor: pointer;
+
+    font-size: 15.5px;
+    font-weight: 610;
+
+    text-transform: uppercase;
+    text-align: center;
+
+    transition: all .3s;
+}
+
+.socialButton:hover {
+    color: rgb(236, 87, 0);
+}
+
+/*AWARDS PANEL COMPONENT*/
+.awardsContainer {
+    background-color: #00000030;
+}
+
